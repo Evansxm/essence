@@ -58,7 +58,6 @@ nav {
 
 .brand-image {
     height: 60px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 nav ul {
@@ -92,12 +91,10 @@ main {
 
 .hero-module {
     background-color: var(--white);
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     border-radius: 40px;
     margin-bottom: 3rem;
     text-align: center;
-    position: relative;
-    overflow: hidden;
     box-shadow: 0 20px 40px rgba(74, 44, 26, 0.03);
 }
 
@@ -107,7 +104,6 @@ main {
     color: var(--dark-brown);
     letter-spacing: 0.5rem;
     margin-bottom: 0.5rem;
-    line-height: 1;
 }
 
 .tag-line {
@@ -115,34 +111,35 @@ main {
     color: var(--orange);
     font-weight: 700;
     margin-bottom: 2rem;
-    letter-spacing: 0.1rem;
+}
+
+.visual-storytelling-image {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(107, 66, 38, 0.6), rgba(242, 140, 40, 0.4)), url('data:image/svg+xml;utf8,<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="400" fill="%236B4226"/><circle cx="400" cy="200" r="100" fill="%23F28C28" opacity="0.5"/><path d="M0 300 Q 200 250 400 300 T 800 300" stroke="%23F5E9DD" stroke-width="5" fill="none"/></svg>');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay-text {
+    font-family: 'Garamond', serif;
+    font-size: 3rem;
+    color: var(--white);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    letter-spacing: 0.2rem;
 }
 
 .hero-copy {
     font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    font-weight: 300;
-}
-
-.action-btn {
-    display: inline-block;
-    padding: 1.2rem 2.5rem;
-    background-color: var(--dark-brown);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 100px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.action-btn:hover {
-    background-color: var(--orange);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(242, 140, 40, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .bento-box {
@@ -150,7 +147,6 @@ main {
     padding: 4rem;
     border-radius: 40px;
     margin-bottom: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
 }
 
 .content-pill {
@@ -165,22 +161,16 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.mission-box h2 {
+.bento-box h2 {
     font-family: 'Garamond', serif;
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: var(--brown);
 }
 
-.mission-box p {
-    font-size: 1.2rem;
-    max-width: 900px;
-}
-
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -189,14 +179,9 @@ main {
     background-color: var(--white);
     padding: 3rem;
     border-radius: 40px;
-    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.bento-tile:hover {
-    transform: scale(1.02);
 }
 
 .tile-header {
@@ -221,53 +206,23 @@ main {
     opacity: 0.6;
 }
 
-.gallery-container {
-    padding: 4rem 0;
+.growth-box {
+    border-left: 10px solid var(--orange);
 }
 
-.section-title {
-    font-family: 'Garamond', serif;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 3rem;
+.contact-box {
+    background-color: var(--dark-brown);
+    color: var(--white);
 }
 
-.gallery-layout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.art-frame {
-    aspect-ratio: 4 / 5;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
-    transition: filter 0.5s ease;
-}
-
-.brown-tone { background-color: var(--brown); }
-.orange-tone { background-color: var(--orange); }
-.ochre-tone { background-color: var(--ochre); }
-.dark-tone { background-color: var(--dark-brown); }
-.beige-tone { background-color: var(--beige); border: 2px solid var(--brown); }
-.mixed-tone { background-image: linear-gradient(45deg, var(--brown), var(--orange)); }
-
-.founder-box {
-    border-right: 15px solid var(--orange);
-}
-
-.founder-box h2 {
-    font-family: 'Garamond', serif;
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.contact-box h2 {
+    color: var(--orange);
 }
 
 footer {
     background-color: var(--dark-brown);
     color: var(--white);
-    padding: 5rem 2rem;
-    margin-top: 5rem;
+    padding: 4rem 2rem;
 }
 
 .footer-grid {
@@ -279,15 +234,10 @@ footer {
 }
 
 @media (max-width: 900px) {
-    .bento-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-layout {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
     .hero-module h1 {
         font-size: 3rem;
+    }
+    .image-overlay-text {
+        font-size: 2rem;
     }
 }
